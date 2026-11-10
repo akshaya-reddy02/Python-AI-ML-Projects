@@ -1,0 +1,2 @@
+model,threshold,accuracy,precision,recall,f1_score,average_precision,roc_auc
+Random Forest,0.25,0.9995241955380115,0.9047619047619048,0.8,0.8491620111731844,0.8033339313357926,0.947420076200634

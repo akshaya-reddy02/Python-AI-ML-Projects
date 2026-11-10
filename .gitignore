@@ -1,0 +1,50 @@
+# Python environments and caches
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+
+# Node / frontend build output
+node_modules/
+dist/
+dist-ssr/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Runtime and local databases
+*.sqlite3
+mlruns/
+mlflow.db
+
+# Archives and temporary files
+*.zip
+*.log
+copy
+python
+
+# DVC cache (data is stored with Git LFS in this repository)
+.dvc/cache/
+
+# Medical Imaging local/generated artifacts
+AIML-01-Medical-Imaging-Diagnosis/data/review_audit.sqlite3
+AIML-01-Medical-Imaging-Diagnosis/data/segmentation/Task04_Hippocampus/Task04_Hippocampus/
+AIML-01-Medical-Imaging-Diagnosis/data/segmentation/prediction_output.nii.gz
+AIML-01-Medical-Imaging-Diagnosis/frontend/dist/
+
+# Financial Fraud local/generated artifacts
+AIML-02-Financial-Fraud-Detection/feature_store/data/
+AIML-02-Financial-Fraud-Detection/submission_staging/

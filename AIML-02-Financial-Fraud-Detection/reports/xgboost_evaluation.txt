@@ -1,0 +1,15 @@
+XGBoost Baseline Evaluation
+===========================
+
+MLflow run ID: ec3c042c11d54a41b17981520c0ac8e9
+Dataset rows before deduplication: 284807
+Duplicate rows removed: 1081
+Rows after deduplication: 283726
+Features: ['Time', 'V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10', 'V11', 'V12', 'V13', 'V14', 'V15', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V22', 'V23', 'V24', 'V25', 'V26', 'V27', 'V28', 'Amount']
+Decision threshold: 0.5
+
+average_precision: 0.820239
+roc_auc: 0.974428
+precision_at_0_50: 0.915663
+recall_at_0_50: 0.800000
+f1_at_0_50: 0.853933

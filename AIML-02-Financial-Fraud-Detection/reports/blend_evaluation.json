@@ -1,0 +1,43 @@
+{
+  "experiment": "XGBoost and GraphSAGE weighted probability comparison",
+  "dataset_rows_after_deduplication": 283726,
+  "train_rows": 226980,
+  "test_rows": 56746,
+  "fraud_test_rows": 95,
+  "random_state": 42,
+  "gnn_epochs": 30,
+  "decision_threshold": 0.5,
+  "xgboost_blend_weight": 0.7,
+  "gnn_blend_weight": 0.30000000000000004,
+  "graph_method": "k-nearest-neighbour transaction feature similarity",
+  "limitations": [
+    "The dataset has no real customer, device, or location IDs.",
+    "Graph edges represent feature similarity, not proven fraud relationships.",
+    "The graph includes test nodes and their features, but not their labels in training loss; this is a transductive experiment.",
+    "The 70/30 blend is a baseline, not a proven optimal combination.",
+    "Results are exploratory and do not establish production performance."
+  ],
+  "metrics": {
+    "xgboost": {
+      "average_precision": 0.8202394640182155,
+      "roc_auc": 0.9744277287807434,
+      "precision_at_0_50": 0.9156626506024096,
+      "recall_at_0_50": 0.8,
+      "f1_at_0_50": 0.8539325842696629
+    },
+    "gnn": {
+      "average_precision": 0.6871207849310117,
+      "roc_auc": 0.9607576955486455,
+      "precision_at_0_50": 0.049013747758517634,
+      "recall_at_0_50": 0.8631578947368421,
+      "f1_at_0_50": 0.09276018099547512
+    },
+    "blend": {
+      "average_precision": 0.8234926117986353,
+      "roc_auc": 0.9625260482232394,
+      "precision_at_0_50": 0.8837209302325582,
+      "recall_at_0_50": 0.8,
+      "f1_at_0_50": 0.8397790055248618
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+    "generated_at_utc": "2026-10-23T10:35:31.030349+00:00",
+    "source_report": "reports\\drift_report.json",
+    "drifted_features": 27,
+    "total_features": 30,
+    "drift_share": 0.9,
+    "drift_share_threshold": 0.5,
+    "retraining_recommended": true,
+    "recommendation": "Review data quality and model performance before approving retraining.",
+    "automatic_retraining": false,
+    "model_overwritten": false
+}

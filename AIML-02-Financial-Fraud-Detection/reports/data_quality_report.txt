@@ -1,0 +1,9 @@
+FINANCIAL FRAUD DETECTION - DATA QUALITY REPORT
+==================================================
+Dataset shape: (284807, 31)
+Missing values: 0
+Duplicate rows: 1081
+
+transaction_type  count  percentage
+      Legitimate 284315     99.8273
+      Fraudulent    492      0.1727

@@ -1,0 +1,40 @@
+
+services:
+  orthanc:
+    image: orthancteam/orthanc:latest
+    container_name: medical-imaging-orthanc
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8042:8042"
+      - "127.0.0.1:4242:4242"
+    environment:
+      ORTHANC_JSON: |
+        {
+          "Name": "Medical Imaging Diagnosis",
+          "RemoteAccessAllowed": true,
+          "AuthenticationEnabled": true,
+          "RegisteredUsers": {
+            "demo": "${ORTHANC_PASSWORD:?set ORTHANC_PASSWORD in .env}"
+          },
+          "StorageDirectory": "/var/lib/orthanc/db"
+        }
+    volumes:
+      - orthanc_storage:/var/lib/orthanc/db
+
+  backend:
+    image: medical-imaging-api:latest
+    container_name: medical-imaging-backend
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      ORTHANC_URL: http://orthanc:8042
+      ORTHANC_USERNAME: demo
+      ORTHANC_PASSWORD: "${ORTHANC_PASSWORD:?set ORTHANC_PASSWORD in .env}"
+      ENABLE_SEGMENTATION: ${ENABLE_SEGMENTATION:-false}
+      ENABLE_ORTHANC_MONITOR: ${ENABLE_ORTHANC_MONITOR:-false}
+    depends_on:
+      - orthanc
+
+volumes:
+  orthanc_storage:

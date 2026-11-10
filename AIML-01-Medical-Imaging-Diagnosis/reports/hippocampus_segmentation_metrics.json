@@ -1,0 +1,106 @@
+{
+  "checkpoint_epoch": 12,
+  "checkpoint_validation_loss": 0.6385733485221863,
+  "checkpoint_validation_dice": 0.31671538949012756,
+  "diagnostic_results": [
+    {
+      "validation_index": 1,
+      "image_file": "hippocampus_269.nii.gz",
+      "label_file": "hippocampus_269.nii.gz",
+      "image_shape": [
+        1,
+        1,
+        36,
+        52,
+        40
+      ],
+      "label_shape": [
+        1,
+        1,
+        36,
+        52,
+        40
+      ],
+      "actual_classes_present": [
+        0,
+        1,
+        2
+      ],
+      "predicted_classes_present": [
+        0,
+        1,
+        2
+      ],
+      "actual_voxel_counts": {
+        "0": 71441,
+        "1": 1725,
+        "2": 1714
+      },
+      "predicted_voxel_counts": {
+        "0": 70234,
+        "1": 1128,
+        "2": 3518
+      },
+      "direct_dice": {
+        "anterior": 0.204697,
+        "posterior": 0.480505
+      },
+      "monai_dice": [
+        [
+          0.20469680428504944,
+          0.48050457239151
+        ]
+      ]
+    },
+    {
+      "validation_index": 2,
+      "image_file": "hippocampus_048.nii.gz",
+      "label_file": "hippocampus_048.nii.gz",
+      "image_shape": [
+        1,
+        1,
+        40,
+        52,
+        32
+      ],
+      "label_shape": [
+        1,
+        1,
+        40,
+        52,
+        32
+      ],
+      "actual_classes_present": [
+        0,
+        1,
+        2
+      ],
+      "predicted_classes_present": [
+        0,
+        1,
+        2
+      ],
+      "actual_voxel_counts": {
+        "0": 63288,
+        "1": 1957,
+        "2": 1315
+      },
+      "predicted_voxel_counts": {
+        "0": 63519,
+        "1": 872,
+        "2": 2169
+      },
+      "direct_dice": {
+        "anterior": 0.162602,
+        "posterior": 0.419059
+      },
+      "monai_dice": [
+        [
+          0.16260161995887756,
+          0.41905856132507324
+        ]
+      ]
+    }
+  ],
+  "note": "Diagnostic only. These two volumes are the same validation subset used during the original training split."
+}

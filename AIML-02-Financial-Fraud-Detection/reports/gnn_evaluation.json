@@ -1,0 +1,16 @@
+{
+  "model": "GraphSAGE",
+  "graph_method": "k-nearest-neighbour transaction similarity",
+  "warning": "This dataset has no real customer, device, or location IDs. Edges represent feature similarity, not proven fraud relationships. This transductive experiment includes test nodes in graph construction; results are exploratory and are not a deployment-ready estimate.",
+  "rows_after_duplicate_removal": 283726,
+  "fraud_rows": 473,
+  "train_rows": 226980,
+  "test_rows": 56746,
+  "nodes": 283726,
+  "directed_edges_after_symmetrization": 2023568,
+  "epochs": 30,
+  "average_precision": 0.6871207849310117,
+  "roc_auc": 0.9607576955486455,
+  "model_path": "C:\\Users\\USER\\Desktop\\Financial-Fraud-Detection\\models\\fraud_gnn_weights.pt",
+  "scaler_path": "C:\\Users\\USER\\Desktop\\Financial-Fraud-Detection\\models\\gnn_scaler.joblib"
+}
